@@ -60,7 +60,7 @@ This project implements an **8-word by 9-bit First-In-First-Out (FIFO)** memory 
 
 ## 📸 Screenshots (Waveforms)
 
-- `waveform.png
+- `waveform.png`
 
 ---
 
