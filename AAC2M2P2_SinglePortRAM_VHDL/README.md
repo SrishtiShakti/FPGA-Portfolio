@@ -1,30 +1,35 @@
-# AAC2M2P2 - 128x32 Single-Port RAM (VHDL)
+# AAC2M2P2 – 128x32 Single-Port RAM (VHDL)
 
-## 📌 Description
-This project implements a **128 x 32-bit single-port RAM** using VHDL for FPGA-based digital design coursework.
+## 📌 Overview
+This project implements a **128 x 32-bit single-port RAM** using **VHDL**. It was developed as part of the "FPGA Design for Embedded Systems" specialization from the University of Colorado Boulder on Coursera. The design adheres to specific constraints such as clocked write and combinational (unregistered) read.
 
-### 🛠 Features
-- 128 memory locations (7-bit address space)
-- 32-bit wide data
-- Single-port memory with:
-  - Clocked write
-  - Combinational (unregistered) read output
+## 🔁 Inputs / Outputs
 
-### 💡 Notes
-- Output `q` is not registered — this ensures a **combinational read**, as per assignment instructions.
-- Input files and testbench are provided by the course for simulation in ModelSim.
+| Signal | Direction | Width | Description                        |
+|--------|-----------|-------|------------------------------------|
+| `clk`  | Input     | 1     | Clock signal for synchronous write |
+| `we`   | Input     | 1     | Write enable                       |
+| `a`    | Input     | 7     | Address (0–127)                    |
+| `d`    | Input     | 32    | Data input                         |
+| `q`    | Output    | 32    | Data output (combinational read)   |
 
-## 📁 Files Included
-- `AAC2M2P2.vhd` — VHDL code for the RAM.
-- `AAC2M2P2_tb.vhdp` — VHDL testbench (provided by course).
-- `vectorh.out` — Input vector file for simulation.
-- `myvectorh.out` — Output from ModelSim after successful simulation.
-- `README.md` — Project summary and details.
+## 🧪 Simulation Strategy
+- Simulated using **ModelSim**.
+- The testbench and vector input files were provided as part of the coursework.
+- `vectorh.out` was used to drive test cases.
+- Simulation output verified against `myvectorh.out`.
 
-## 🧪 Simulation
-Tested using **ModelSim** with provided testbench and input vectors.
+## 📁 Design Files
+- `AAC2M2P2.vhd`: VHDL source code for 128x32 Single-Port RAM.
+- `AAC2M2P2_tb.vhd`: VHDL testbench (provided).
+- `vectorh.out`: Input vectors for simulation.
+- `myvectorh.out`: Simulation output results.
+- `README.md`: This file.
 
-## 📚 Context
-This was created as part of the "FPGA Design for Embedded Systems" specialization from the University of Colorado Boulder (Coursera).
+## ✅ Testbench Results
+- The design passed all vector-driven tests.
+- Output matched the expected results provided in `vectorh.out`.
 
----
+## 📸 Screenshots (Waveform)
+'waveform.png'
+
