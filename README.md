@@ -8,7 +8,7 @@ Designed for learning and demonstration purposes, each project includes synthesi
 
 ## 🧩 Modules Overview
 
-### ▸ Problem 2: 128x32 Single-Port RAM
+### ▸ Problem AAC2M2P2, AAC2M4P2: 128x32 Single-Port RAM
 
 * **Verilog**: `AAC2M4P2_SinglePortRAM_Verilog/AAC2M4P2.v`
 * **VHDL**: `AAC2M2P2_SinglePortRAM_VHDL/AAC2M4P2.vhd`
@@ -16,7 +16,7 @@ Designed for learning and demonstration purposes, each project includes synthesi
 
 ---
 
-### ▸ Problem 3: Finite State Machine (FSM)
+### ▸ Problem AAC2M2P3, AAC2M4P3: Finite State Machine (FSM)
 
 * **Verilog**: `AAC2M4P3_StateMachine_Verilog/AAC2M4P3.v`
 * **VHDL**: `AAC2M2P3_StateMachine_VHDL/AAC2M4P3.vhd`
@@ -24,7 +24,7 @@ Designed for learning and demonstration purposes, each project includes synthesi
 
 ---
 
-### ▸ Problem 4: 8-Operation ALU
+### ▸ Problem AAC2M4H1: 8-Operation ALU
 
 * **Verilog**: `AAC2M4H1_ALU_Verilog/AAC2M4H1.v`
 * **VHDL**: `AAC2M4H1_ALU_VHDL/AAC2M4H1.vhd`
@@ -32,7 +32,7 @@ Designed for learning and demonstration purposes, each project includes synthesi
 
 ---
 
-### ▸ Problem 5: 8x9 FIFO Memory
+### ▸ Problem AAC2M4H2: 8x9 FIFO Memory
 
 * **Verilog**: `AAC2M4H2_FIFO8x9_Verilog/AAC2M4H2.v`
 * **VHDL**: `AAC2M4H2_FIFO8x9_VHDL/AAC2M4H2.vhd`
