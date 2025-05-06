@@ -1,43 +1,81 @@
-# FIFO (First-In-First-Out) Memory - 8x9 - Verilog
+# AAC2M4H2 – 256x9 FIFO Memory [Verilog]
 
-## Description
+## 🧾 Overview
 
-This project implements a **FIFO (First-In-First-Out)** memory with an 8-bit wide data input and output and a depth of 256 entries, designed in **Verilog**. The FIFO has separate read and write pointers, as well as the capability to clear and increment these pointers. It also includes basic control signals for read (`rden`), write (`wren`), and pointer clearing (`RdPtrClr`, `WrPtrClr`).
+This project implements a **256-depth by 9-bit wide FIFO (First-In-First-Out)** memory module using **Verilog**. It features independent read and write control logic, pointer reset and increment functionality, and is suitable for use in buffered data communication systems.
 
-## Functionality
+---
 
-- **FIFO Memory Size**: 256 entries, each 9 bits wide.
-- **Read/Write Control**: Managed by `rden` (read enable) and `wren` (write enable).
-- **Read and Write Pointers**: These pointers are managed by `RdPtrClr` (read pointer clear), `WrPtrClr` (write pointer clear), `RdInc` (read pointer increment), and `WrInc` (write pointer increment).
-- **Reset (`rst`)**: Resets the FIFO and pointers to their initial state.
+## 🔌 Inputs/Outputs
 
-### Operations:
-1. **Write Operation**:
-   - On every rising edge of the clock, if `wren` is high, the data from `DataIn` is written to the FIFO at the location specified by `wrptr`.
-   - The `wrptr` is incremented by `WrInc` with each write.
+| Port       | Direction | Width     | Description                                           |
+|------------|-----------|-----------|-------------------------------------------------------|
+| clk        | in        | 1         | Clock signal for synchronizing operations             |
+| rst        | in        | 1         | Synchronous reset for FIFO and pointers               |
+| RdPtrClr   | in        | 1         | Clears read pointer to 0                              |
+| WrPtrClr   | in        | 1         | Clears write pointer to 0                             |
+| RdInc      | in        | 1         | Increments read pointer                               |
+| WrInc      | in        | 1         | Increments write pointer                              |
+| DataIn     | in        | 9         | Input data to write into FIFO                         |
+| rden       | in        | 1         | Read enable                                           |
+| wren       | in        | 1         | Write enable                                          |
+| DataOut    | out       | 9         | Output data from FIFO                                 |
+| wr_cnt     | out       | 8         | Write pointer value                                   |
+| rd_cnt     | out       | 8         | Read pointer value                                    |
 
-2. **Read Operation**:
-   - When `rden` is high, the data at the location specified by `rdptr` is output on `DataOut`.
-   - The `rdptr` is incremented by `RdInc` with each read.
+---
 
-3. **Pointer Clearing**:
-   - The `RdPtrClr` signal resets the read pointer `rdptr` to 0.
-   - The `WrPtrClr` signal resets the write pointer `wrptr` to 0.
+## ⚙️ Core Architecture
 
-### Module Interface
+- **FIFO Size**: 256 entries, each 9 bits wide.
+- **Write Operation**:
+  - On rising clock edge, if `wren = 1`, the 9-bit `DataIn` is written to FIFO at `wrptr`.
+  - `wrptr` is incremented when `WrInc = 1`.
+- **Read Operation**:
+  - If `rden = 1`, the data at address `rdptr` is output on `DataOut`.
+  - `rdptr` is incremented when `RdInc = 1`.
+- **Pointer Reset**:
+  - `RdPtrClr` and `WrPtrClr` reset their respective pointers to `0`.
+- **Synchronous Reset**: `rst` clears the memory and resets both pointers.
 
-- **Inputs**:
-  - `clk` (Clock): Synchronizes the FIFO operations.
-  - `rst` (Reset): Resets FIFO memory and pointers.
-  - `RdPtrClr` (Read Pointer Clear): Clears the read pointer.
-  - `WrPtrClr` (Write Pointer Clear): Clears the write pointer.
-  - `RdInc` (Read Pointer Increment): Increments the read pointer.
-  - `WrInc` (Write Pointer Increment): Increments the write pointer.
-  - `DataIn` (9 bits): Input data to be written to FIFO.
-  - `rden` (Read Enable): Enables read operation.
-  - `wren` (Write Enable): Enables write operation.
+---
 
-- **Outputs**:
-  - `DataOut` (9 bits): Data read from the FIFO memory.
-  - `wr_cnt` (8 bits): The current write pointer value.
-  - `rd_cnt` (8 bits): The current read pointer value.
+## 🧪 Simulation Strategy
+
+- Simulated using **ModelSim** or equivalent Verilog simulator.
+- **Testbench provided by the course**.
+- Simulation verifies:
+  - Correct pointer increment/reset behavior.
+  - Accurate data read/write operation.
+  - Output matches FIFO sequence expectations.
+
+---
+
+## 📁 Design Files
+
+- `AAC2M4H2.v` – Verilog implementation of the 256x9 FIFO.
+- `AAC2M4H2_tb.vp` – Verilog testbench (provided by course).
+- `vectorh.out` – Simulation input vectors.
+- `myvectorh.out` – Output results after simulation.
+- `README.md` – Project documentation.
+
+---
+
+## ✅ Testbench Results
+
+- Successful read/write transactions confirmed.
+- Pointer updates and reset behavior verified.
+- Output `DataOut` matches expected FIFO ordering.
+
+---
+
+## 📸 Screenshots (Waveforms)
+
+- `waveform.png`
+
+---
+
+## 📚 Notes
+
+- Logic uses case statements to avoid unintended latch synthesis.
+- This design is ideal for deep buffering needs in data pipelines or serial interfaces.
