@@ -19,13 +19,6 @@ This project implements a **128-word by 32-bit wide single-port RAM** using **VH
 
 ---
 
-## 🛠️ Tools Used
-
-- **Intel Quartus Prime 16.1**
-- **ModelSim – Intel FPGA Edition**
-
----
-
 ## 📌 RAM Module Features
 
 - **Memory Size**: 128 entries × 32 bits
