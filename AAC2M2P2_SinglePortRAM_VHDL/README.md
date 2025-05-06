@@ -31,5 +31,4 @@ This project implements a **128 x 32-bit single-port RAM** using **VHDL**. It wa
 - Output matched the expected results provided in `vectorh.out`.
 
 ## 📸 Screenshots (Waveform)
-'waveform.png'
-
+- `waveform.png`
