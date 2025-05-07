@@ -8,7 +8,7 @@ Designed for learning and demonstration purposes, each project includes synthesi
 
 ## 🧩 Modules Overview
 
-### ▸ Problem C4M1P1: 7-Segment Display Decoder
+### ▸ [Problem C4M1P1: 7-Segment Display Decoder](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/C4M1P1_seven_segment_display)
 
 * **VHDL**: `C4M1P1_SevenSegDisplay_VHDL/SevenSeg_Display.vhd`
 * **Testbench**: `C4M1P1_SevenSegDisplay_VHDL/SevenSeg_Display_tb.vhd`
@@ -20,7 +20,7 @@ Designed for learning and demonstration purposes, each project includes synthesi
 ### ▸ Problem AAC2M2P2, AAC2M4P2: 128x32 Single-Port RAM
 
 * **Verilog**: `AAC2M4P2_SinglePortRAM_Verilog/AAC2M4P2.v`
-* **VHDL**: `AAC2M2P2_SinglePortRAM_VHDL/AAC2M4P2.vhd`
+* [**VHDL**: `AAC2M2P2_SinglePortRAM_VHDL/AAC2M4P2.vhd`](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/AAC2M2P2_SinglePortRAM_VHDL)
 * 💡 *Implements synchronous read/write RAM with 128 words of 32-bit width.*
 
 ---
