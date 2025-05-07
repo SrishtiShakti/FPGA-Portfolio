@@ -19,7 +19,7 @@ Designed for learning and demonstration purposes, each project includes synthesi
 
 ### ▸ Problem AAC2M2P2, AAC2M4P2: 128x32 Single-Port RAM
 
-* **Verilog**: `AAC2M4P2_SinglePortRAM_Verilog/AAC2M4P2.v`
+* [**Verilog**: `AAC2M4P2_SinglePortRAM_Verilog/AAC2M4P2.v`](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/AAC2M4P2_SinglePortRAM_Verilog)
 * [**VHDL**: `AAC2M2P2_SinglePortRAM_VHDL/AAC2M4P2.vhd`](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/AAC2M2P2_SinglePortRAM_VHDL)
 * 💡 *Implements synchronous read/write RAM with 128 words of 32-bit width.*
 
@@ -27,24 +27,24 @@ Designed for learning and demonstration purposes, each project includes synthesi
 
 ### ▸ Problem AAC2M2P3, AAC2M4P3: Finite State Machine (FSM)
 
-* **Verilog**: `AAC2M4P3_StateMachine_Verilog/AAC2M4P3.v`
-* **VHDL**: `AAC2M2P3_StateMachine_VHDL/AAC2M4P3.vhd`
+* [**Verilog**: `AAC2M4P3_StateMachine_Verilog/AAC2M4P3.v`](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/AAC2M4P3_StateMachine_Verilog)
+* [**VHDL**: `AAC2M2P3_StateMachine_VHDL/AAC2M4P3.vhd`](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/AAC2M2P3_StateMachine_VHDL)
 * 💡 *Implements a simple FSM demonstrating state transitions and control logic.*
 
 ---
 
 ### ▸ Problem AAC2M4H1: 8-Operation ALU
 
-* **Verilog**: `AAC2M4H1_ALU_Verilog/AAC2M4H1.v`
-* **VHDL**: `AAC2M4H1_ALU_VHDL/AAC2M4H1.vhd`
+* [**Verilog**: `AAC2M4H1_ALU_Verilog/AAC2M4H1.v`](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/AAC2M4H1_ALU_Verilog)
+* [**VHDL**: `AAC2M4H1_ALU_VHDL/AAC2M4H1.vhd`](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/AAC2M4H1_ALU_VHDL)
 * 💡 *Performs 8 operations including addition, subtraction, bitwise AND/OR, and increment/decrement.*
 
 ---
 
 ### ▸ Problem AAC2M4H2: 8x9 FIFO Memory
 
-* **Verilog**: `AAC2M4H2_FIFO8x9_Verilog/AAC2M4H2.v`
-* **VHDL**: `AAC2M4H2_FIFO8x9_VHDL/AAC2M4H2.vhd`
+* [**Verilog**: `AAC2M4H2_FIFO8x9_Verilog/AAC2M4H2.v`](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/AAC2M4H2_FIFO8x9_Verilog)
+* [**VHDL**: `AAC2M4H2_FIFO8x9_VHDL/AAC2M4H2.vhd`](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/AAC2M4H2_FIFO8x9_VHDL)
 * 💡 *Implements an 8-word deep, 9-bit wide FIFO with pointer-based read/write control.*
 
 ---
