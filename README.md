@@ -8,6 +8,15 @@ Designed for learning and demonstration purposes, each project includes synthesi
 
 ## 🧩 Modules Overview
 
+### ▸ Problem C4M1P1: 7-Segment Display Decoder
+
+* **VHDL**: `C4M1P1_SevenSegDisplay_VHDL/SevenSeg_Display.vhd`
+* **Testbench**: `C4M1P1_SevenSegDisplay_VHDL/SevenSeg_Display_tb.vhd`
+* 💡 *Displays 4-bit switch values on HEX0 and HEX1 7-segment displays using manually written Boolean logic.*
+* ✅ *Completed without access to DE10-Lite board; functionality verified using a custom testbench.*
+
+---
+
 ### ▸ Problem AAC2M2P2, AAC2M4P2: 128x32 Single-Port RAM
 
 * **Verilog**: `AAC2M4P2_SinglePortRAM_Verilog/AAC2M4P2.v`
@@ -37,15 +46,6 @@ Designed for learning and demonstration purposes, each project includes synthesi
 * **Verilog**: `AAC2M4H2_FIFO8x9_Verilog/AAC2M4H2.v`
 * **VHDL**: `AAC2M4H2_FIFO8x9_VHDL/AAC2M4H2.vhd`
 * 💡 *Implements an 8-word deep, 9-bit wide FIFO with pointer-based read/write control.*
-
----
-
-### ▸ Problem C4M1P1: 7-Segment Display Decoder
-
-* **VHDL**: `C4M1P1_SevenSegDisplay_VHDL/SevenSeg_Display.vhd`
-* **Testbench**: `C4M1P1_SevenSegDisplay_VHDL/SevenSeg_Display_tb.vhd`
-* 💡 *Displays 4-bit switch values on HEX0 and HEX1 7-segment displays using manually written Boolean logic.*
-* ✅ *Completed without access to DE10-Lite board; functionality verified using a custom testbench.*
 
 ---
 
