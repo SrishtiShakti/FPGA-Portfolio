@@ -70,5 +70,6 @@ FPGA-Portfolio/
 ├── AAC2M4P2_SinglePortRAM_Verilog/    # Verilog: 128x32 Single-Port RAM
 ├── AAC2M4P3_StateMachine_Verilog/     # Verilog: Simple FSM
 ├── C4M1P1_Seven_Segment_Display/      # VHDL: 7-Segment Display Decoder with Testbench
+├── C4M1P2_Binary to BCD Converter/    # VHDL: binary-to-decimal converter with Testbench
 └── README.md
 ```
