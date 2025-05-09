@@ -8,10 +8,18 @@ Designed for learning and demonstration purposes, each project includes synthesi
 
 ## 🧩 Modules Overview
 
+
+### [Problem C4M1P2: Binary to BCD Display](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/C4M1P2_Binary%20to%20BCD%20Converter%20(VHDL))
+* **VHDL**: `C4M1P2: Binary to BCD Display(VHDL)/C4M1P2.vhd`
+* **Testbench**: `C4M1P2_Binary To BCD Converter(VHDL)/C4M1P2_tb.vhd`
+* 💡 Implements a binary-to-decimal converter using combinational logic and Boolean expressions. Displays 4-bit binary input (SW) as two-digit BCD output on HEX1 and HEX0.
+* ✅ Manually derived comparator, MUX, and logic for circuit A; simulated using ModelSim and verified with waveform and vectorh.out. Testbench authored by me.
+
+---
 ### ▸ [Problem C4M1P1: 7-Segment Display Decoder](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/C4M1P1_seven_segment_display)
 
-* **VHDL**: `C4M1P1_SevenSegDisplay_VHDL/SevenSeg_Display.vhd`
-* **Testbench**: `C4M1P1_SevenSegDisplay_VHDL/SevenSeg_Display_tb.vhd`
+* **VHDL**: `C4M1P1_seven_segment_display_VHDL/C4M1P1.vhd`
+* **Testbench**: `C4M1P1_seven_segment_display_VHDL/C4M1P1_tb.vhd`
 * 💡 *Displays 4-bit switch values on HEX0 and HEX1 7-segment displays using manually written Boolean logic.*
 * ✅ *Completed without access to DE10-Lite board; functionality verified using a custom testbench.*
 
