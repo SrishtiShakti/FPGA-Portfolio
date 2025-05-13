@@ -1,43 +1,61 @@
-# 4-bit Ripple Carry Adder with Carry-In
+# ⚙️ C4M1P3 – 4-bit Ripple Carry Adder (VHDL)
 
-## Overview
+## 📌 Overview  
+This project implements a 4-bit **ripple carry adder** using structural VHDL. It is constructed from four instances of a 1-bit full adder component. The design takes two 4-bit binary inputs (`A`, `B`) and an optional carry-in (`cin`) and produces a 4-bit sum (`S`) and a carry-out (`cout`).
 
-This project implements a **4-bit ripple carry adder** with a carry-in (`cin`) and outputs both a 4-bit `sum` and a carry-out (`cout`). The adder is built using basic full adder logic, chained together to perform binary addition of two 4-bit unsigned numbers (`A` and `B`) with an optional carry input.
+- ✅ Functional simulation performed in ModelSim  
+- ✅ Exhaustive testbench (256 combinations tested)  
+- ✅ Output logged to `vectorh.out`  
+- ✅ No FPGA board required for testing
 
-This is part of the Numbers and Displays module (C4M2P1) of the FPGA Design for Embedded Systems Specialization.
+---
 
-## Inputs/Outputs
+## 🔌 Inputs and Outputs
 
-| Signal | Direction | Width | Description                      |
-|--------|-----------|-------|----------------------------------|
-| `A`    | Input     | 4-bit | First operand                    |
-| `B`    | Input     | 4-bit | Second operand                   |
-| `cin`  | Input     | 1-bit | Carry input                      |
-| `sum`  | Output    | 4-bit | Result of `A + B + cin`          |
-| `cout` | Output    | 1-bit | Carry output from MSB addition   |
+| Signal | Direction | Width | Description                    |
+|--------|-----------|-------|--------------------------------|
+| A      | Input     | 4 bits| First binary operand           |
+| B      | Input     | 4 bits| Second binary operand          |
+| cin    | Input     | 1 bit | Carry-in                       |
+| S      | Output    | 4 bits| Sum of A, B, and cin           |
+| cout   | Output    | 1 bit | Final carry-out (overflow bit) |
 
-## Simulation Strategy
+---
 
-- **Simulation Tool:** ModelSim (via Quartus Prime integration)
-- **Testbench:** A VHDL testbench was provided to validate functionality.
-- **Vector File:** `vectorh.out` was automatically generated to verify bit-level correctness.
-- **Waveform File:** A `.do` file was used to visualize waveform and confirm correct signal propagation and carry behavior.
-- **Initial 'U' Behavior:** The simulation begins with `cin = U` (undefined) before the clock starts, which is expected and does not affect test results.
+## 🧠 Design Architecture
 
-## Design Files
+- `C4M1P3_FA.vhd`: A 1-bit full adder (FA) module.
+- `C4M1P3.vhd`: Top-level design using four FAs to construct a ripple carry adder.
+- `C4M1P3_tb.vhd`: Exhaustive testbench that tests all 256 combinations of `A`, `B`, and `cin`, and writes results to `vectorh.out`.
 
-- `adder.vhdl` – Structural VHDL implementation of the 4-bit adder
-- `adder_tb.vhdl` – VHDL testbench provided by the instructor
-- `vectorh.out` – Output file from simulation showing test vector results
-- `wave.do` – Waveform script file for ModelSim
-- `adder.qpf`, `adder.qsf`, etc. – Quartus Prime project files
+---
 
-## Testbench Results
+## 🧪 Simulation Strategy
 
-The design was simulated successfully, and the adder produced correct outputs for all combinations of inputs. Below is a sample of the output from `vectorh.out`:
-A = 0000  B = 1111  cin = 1  SUM = 0000  cout = 1
-A = 0001  B = 1111  cin = 1  SUM = 0001  cout = 1
-A = 0010  B = 0000  cin = 0  SUM = 0010  cout = 0
-A = 0100  B = 1011  cin = 1  SUM = 0000  cout = 1
-A = 0111  B = 1001  cin = 0  SUM = 0000  cout = 1
+- Simulation performed in **ModelSim**.
+- Wait time of `20 ns` between input combinations.
+- Output written to `vectorh.out` in human-readable format using `textio`.
+- Testbench designed using `for` loops to cover all input combinations.
+
+---
+
+## 📁 Design Files
+
+| File                  | Description                                 |
+|-----------------------|---------------------------------------------|
+| `C4M1P3.vhd`          | Top-level ripple carry adder (structural)   |
+| `C4M1P3_FA.vhd`       | 1-bit full adder component                  |
+| `C4M1P3_tb.vhd`       | ✅ Testbench (written by me)                 |
+| `vectorh.out`         | Output log with all 256 test results        |
+| `wave.do`             | Waveform setup script for ModelSim          |
+| `waveform2.png`       | Screenshot of simulation waveform |
+| `README.md`           | This documentation file                     |
+
+---
+
+## 🧪 Sample Output (vectorh.out)
+A = "0000"  B = "0000"  cin = '0'  SUM = "0000"  cout = '0'
+A = "0000"  B = "0000"  cin = '1'  SUM = "0001"  cout = '0'
+A = "0001"  B = "1111"  cin = '1'  SUM = "0001"  cout = '1'
 ...
+A = "1111"  B = "1111"  cin = '1'  SUM = "1111"  cout = '1'
