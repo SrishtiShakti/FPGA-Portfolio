@@ -8,7 +8,13 @@ Designed for learning and demonstration purposes, each project includes synthesi
 
 ## 🧩 Modules Overview
 
+### [Problem C4M1P3: 4-bit Ripple Carry Adder](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/C4M1P3_RippleCarryAdder)
+* VHDL: C4M1P3_RippleCarryAdder/C4M1P3.vhd , C4M1P3_RippleCarryAdder/C4M1P3_FA.vhd
+* Testbench: C4M1P3_RippleCarryAdder/C4M1P3_tb.vhd
+* 💡 Implements a 4-bit ripple carry adder using four instances of a custom full adder. Inputs A(3 downto 0), B(3 downto 0), and carry-in produce a 5-bit output: SUM and carry-out
+* ✅ Simulated successfully in ModelSim using a self-written testbench. Quartus implementation planned for future testing on DE10-Lite board.
 
+---
 ### [Problem C4M1P2: Binary to BCD Display](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/C4M1P2_Binary%20to%20BCD%20Converter%20(VHDL))
 * **VHDL**: `C4M1P2: Binary to BCD Display(VHDL)/C4M1P2.vhd`
 * **Testbench**: `C4M1P2_Binary To BCD Converter(VHDL)/C4M1P2_tb.vhd`
@@ -71,5 +77,6 @@ FPGA-Portfolio/
 ├── AAC2M4P3_StateMachine_Verilog/     # Verilog: Simple FSM
 ├── C4M1P1_Seven_Segment_Display/      # VHDL: 7-Segment Display Decoder with Testbench
 ├── C4M1P2_Binary to BCD Converter/    # VHDL: binary-to-decimal converter with Testbench
+├──C4M1P3_RippleCarryAdder/            # VHDL: 4-bit Ripple Carry Adder with Testbench
 └── README.md
 ```
