@@ -54,8 +54,14 @@ This project implements a 4-bit **ripple carry adder** using structural VHDL. It
 ---
 
 ## 🧪 Sample Output (vectorh.out)
-A = "0000"  B = "0000"  cin = '0'  SUM = "0000"  cout = '0'
-A = "0000"  B = "0000"  cin = '1'  SUM = "0001"  cout = '0'
-A = "0001"  B = "1111"  cin = '1'  SUM = "0001"  cout = '1'
-...
-A = "1111"  B = "1111"  cin = '1'  SUM = "1111"  cout = '1'
+
+Below are the results of simulating the 4-bit ripple carry adder:
+
+| **A (Binary)** | **B (Binary)** | **cin (Binary)** | **SUM (Binary)** | **cout (Binary)** |
+|---------------|---------------|---------------|---------------|---------------|
+| 0000 | 0000 | 0 | 0000 | 0 |
+| 0000 | 0001 | 1 | 0010 | 0 |
+| 0001 | 1111 | 0 | 0000 | 1 |
+| ... | ... | ... | ... | ... |
+| 1111 | 1111 | 0 | 1110 | 1 |
+
