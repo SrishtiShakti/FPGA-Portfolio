@@ -16,6 +16,13 @@ Where possible, equivalent VHDL and Verilog versions are included for direct com
 
 ## 🧩 Modules Overview
 
+### ▸ [Problem C4M1P5: BCD Adder (Algorithmic Version with IF-ELSE)](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/C4M1P5_BCD_Adder2)
+* **VHDL**: `C4M1P5_BCD_Adder2/C4M1P5.vhd`
+* **Testbench**: `C4M1P5_BCD_Adder2/C4M1P5_tb.vhd`
+* 💡 Implements a BCD adder using an algorithmic VHDL approach with `if-else` and comparison operators. Computes the sum `A + B + cin`, performs correction if the raw sum exceeds 9, and outputs a valid two-digit BCD sum.
+* ✅ Simulated in ModelSim with self-written testbench; displays A and B on HEX4/HEX3 and the final sum on HEX1/HEX0. Debugging via LEDR. Quartus RTL viewer confirms synthesized logic using comparators, adders, and conditional structures.
+
+---
 ### ▸ [Problem C4M1P4: BCD Adder and 7-Segment Display](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/C4M1P4_BCD_Adder)
 * **VHDL**: `C4M1P4_BCD_Adder/C4M1P4.vhd`
 * **Testbench**: `C4M1P4_BCD_Adder/C4M1P4_tb.vhd`
@@ -25,8 +32,8 @@ Where possible, equivalent VHDL and Verilog versions are included for direct com
 ---
 
 ### [Problem C4M1P3: 4-bit Ripple Carry Adder](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/C4M1P3_RippleCarryAdder)
-* VHDL: C4M1P3_RippleCarryAdder/C4M1P3.vhd , C4M1P3_RippleCarryAdder/C4M1P3_FA.vhd
-* Testbench: C4M1P3_RippleCarryAdder/C4M1P3_tb.vhd
+* VHDL: `C4M1P3_RippleCarryAdder/C4M1P3.vhd` , `C4M1P3_RippleCarryAdder/C4M1P3_FA.vhd`
+* Testbench: `C4M1P3_RippleCarryAdder/C4M1P3_tb.vhd`
 * 💡 Implements a 4-bit ripple carry adder using four instances of a custom full adder. Inputs A(3 downto 0), B(3 downto 0), and carry-in produce a 5-bit output: SUM and carry-out
 * ✅ Simulated successfully in ModelSim using a self-written testbench. Quartus implementation planned for future testing on DE10-Lite board.
 
@@ -95,5 +102,6 @@ FPGA-Portfolio/
 ├── C4M1P2_Binary to BCD Converter/    # VHDL: binary-to-decimal converter with Testbench
 ├──C4M1P3_RippleCarryAdder/            # VHDL: 4-bit Ripple Carry Adder with Testbench
 ├──C4M1P4_BCD_Adder/                    # VHDL: BCD adder with Testbench
+├──C4M1P5_BCD_Adder2/                    # VHDL: BCD adder using if-else with Testbench
 └── README.md
 ```
