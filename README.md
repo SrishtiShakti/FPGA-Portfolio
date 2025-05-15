@@ -24,7 +24,6 @@ Where possible, equivalent VHDL and Verilog versions are included for direct com
 
 ---
 
----
 ### [Problem C4M1P3: 4-bit Ripple Carry Adder](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/C4M1P3_RippleCarryAdder)
 * VHDL: C4M1P3_RippleCarryAdder/C4M1P3.vhd , C4M1P3_RippleCarryAdder/C4M1P3_FA.vhd
 * Testbench: C4M1P3_RippleCarryAdder/C4M1P3_tb.vhd
