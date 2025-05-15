@@ -1,13 +1,30 @@
 # FPGA Portfolio
 
-This repository showcases FPGA design modules implemented in **Verilog** and **VHDL**. Each module demonstrates core digital design concepts such as memory structures, finite state machines (FSMs), arithmetic logic units (ALUs), FIFO buffers, and display control.
+This repository showcases a curated collection of FPGA design modules implemented in both **Verilog** and **VHDL**. Each module illustrates fundamental digital design concepts such as memory structures (RAM, FIFO), finite state machines (FSMs), arithmetic logic units (ALUs), and 7-segment display control.
 
-Designed for learning and demonstration purposes, each project includes synthesizable code and supports comparison between Verilog and VHDL.
+Projects are developed as part of the *FPGA Design for Embedded Systems* specialization and are intended for both learning and demonstration. Each design includes:
+
+- Synthesizable HDL code
+- Self-written or course-provided testbenches
+- Simulation results using **ModelSim**
+- Optional Quartus projects for synthesis and board-level deployment
+
+Where possible, equivalent VHDL and Verilog versions are included for direct comparison.
+
 
 ---
 
 ## 🧩 Modules Overview
 
+### ▸ [Problem C4M1P4: BCD Adder and 7-Segment Display](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/C4M1P4_BCD_Adder)
+* **VHDL**: `C4M1P4_BCD_Adder/C4M1P4.vhd`
+* **Testbench**: `C4M1P4_BCD_Adder/C4M1P4_tb.vhd`
+* 💡 Adds two BCD digits (X and Y) with a carry-in and displays the result as a two-digit decimal on S1 and S0 using 7-segment logic.
+* ✅ Simulated successfully in ModelSim using a self-written testbench. Quartus implementation planned for future testing on DE10-Lite board.
+
+---
+
+---
 ### [Problem C4M1P3: 4-bit Ripple Carry Adder](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/C4M1P3_RippleCarryAdder)
 * VHDL: C4M1P3_RippleCarryAdder/C4M1P3.vhd , C4M1P3_RippleCarryAdder/C4M1P3_FA.vhd
 * Testbench: C4M1P3_RippleCarryAdder/C4M1P3_tb.vhd
@@ -78,5 +95,6 @@ FPGA-Portfolio/
 ├── C4M1P1_Seven_Segment_Display/      # VHDL: 7-Segment Display Decoder with Testbench
 ├── C4M1P2_Binary to BCD Converter/    # VHDL: binary-to-decimal converter with Testbench
 ├──C4M1P3_RippleCarryAdder/            # VHDL: 4-bit Ripple Carry Adder with Testbench
+├──C4M1P4_BCD_Adder/                    # VHDL: BCD adder with Testbench
 └── README.md
 ```
