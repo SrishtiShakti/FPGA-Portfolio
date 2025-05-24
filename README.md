@@ -1,6 +1,6 @@
 # FPGA Portfolio
 
-This repository showcases a curated collection of FPGA design modules implemented in both **Verilog** and **VHDL**. Each module illustrates fundamental digital design concepts such as memory structures (RAM, FIFO), finite state machines (FSMs), arithmetic logic units (ALUs), and 7-segment display control.
+This repository showcases a curated collection of FPGA design modules implemented in both **Verilog** and **VHDL**. Each module illustrates fundamental digital design concepts such as memory structures (RAM, FIFO), finite state machines (FSMs), arithmetic logic units (ALUs),PPWM with PLL aand debouncer, and 7-segment display control.
 
 Projects are developed as part of the *FPGA Design for Embedded Systems* specialization and are intended for both learning and demonstration. Each design includes:
 
@@ -16,6 +16,14 @@ Where possible, equivalent VHDL and Verilog versions are included for direct com
 
 ## 🧩 Modules Overview
 
+### ▸ [Problem PWM_With_PLL: PWM Generator with PLL and Debouncer](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/PWM_With_PLL)
+
+* **Verilog**: `PWM_With_PLL/pwm_gen.v`, `PWM_With_PLL/debouncer.v`, `PWM_With_PLL/pwm_led_top.v`, `PWM_With_PLL/pwm_pll.v`  
+* **Schematic**: `PWM_With_PLL/pwm_led_top.bdf`  
+* 💡 Implements a PWM signal generator with duty cycle control using switches, a debouncer for input stability, and a PLL-generated clock for precise timing. Uses a schematic-based top-level design connected to Verilog modules and IP blocks.  
+* ✅ Simulated in ModelSim (via schematic-generated Verilog HDL). Built in Quartus Prime using a combination of Verilog source files, PLL IP core, and a schematic (.bdf) as top-level design. Duty cycle control verified via waveform outputs. Project tested without needing a DE10-Lite board.
+
+---
 ### ▸ [Problem C4M1P5: BCD Adder (Algorithmic Version with IF-ELSE)](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/C4M1P5_BCD_Adder2)
 * **VHDL**: `C4M1P5_BCD_Adder2/C4M1P5.vhd`
 * **Testbench**: `C4M1P5_BCD_Adder2/C4M1P5_tb.vhd`
