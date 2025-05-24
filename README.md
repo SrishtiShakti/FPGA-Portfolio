@@ -109,7 +109,8 @@ FPGA-Portfolio/
 ├── C4M1P1_Seven_Segment_Display/      # VHDL: 7-Segment Display Decoder with Testbench
 ├── C4M1P2_Binary to BCD Converter/    # VHDL: binary-to-decimal converter with Testbench
 ├──C4M1P3_RippleCarryAdder/            # VHDL: 4-bit Ripple Carry Adder with Testbench
-├──C4M1P4_BCD_Adder/                    # VHDL: BCD adder with Testbench
-├──C4M1P5_BCD_Adder2/                    # VHDL: BCD adder using if-else with Testbench
+├──C4M1P4_BCD_Adder/                   # VHDL: BCD adder with Testbench
+├──C4M1P5_BCD_Adder2/                  # VHDL: BCD adder using if-else with Testbench
+├──PWM_With_PLL/                       # Verilog: PWM Generator with PLL and Debouncer
 └── README.md
 ```
