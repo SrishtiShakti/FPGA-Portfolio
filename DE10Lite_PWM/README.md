@@ -37,14 +37,17 @@ This project implements a pulse width modulation (PWM) LED controller on the DE1
 
 ## 📁 Design Files
 
-| File Name            | Description                                       |
-|----------------------|---------------------------------------------------|
-| `pwm_gen.v`          | Verilog module generating PWM output              |
-| `debouncer.v`        | Verilog module for stabilizing input switches     |
-| `pwm_led_top.bdf`    | Top-level schematic block diagram                 |
-| `pwm_pll.qip/.bsf`   | IP core files for ALTPLL generating two clocks    |
-| `pwm_led_top.v`      | HDL version of schematic used for simulation      |
-| `pwm.qpf/.qsf`       | Quartus project and settings files                |
+| File Name            | Description                                                                 |
+|----------------------|-----------------------------------------------------------------------------|
+| `debouncer.v`        | Verilog module that debounces mechanical switch inputs                      |
+| `pwm_gen.v`          | Verilog module that generates a PWM signal based on 3-bit duty cycle input  |
+| `pwm_led_top.bdf`    | Top-level schematic (Block Design File) connecting PWM, PLL, and switches   |
+| `pwm_led_top.v`      | HDL (Verilog) version of the schematic used for RTL simulation in ModelSim  |
+| `pwm_pll.v`          | Auto-generated Verilog module for ALTPLL (produces 25 MHz and 30 kHz clocks)|
+| `pwm_pll.qip`        | IP integration file needed for Quartus to include the ALTPLL module         |
+| `wave.do`            | ModelSim waveform configuration file for visualizing simulation signals     |
+| `README.md`          | Project documentation                                                       |
+| `pwm.qpf`            | Quartus Project File specifying project structure and settings              |
 
 ---
 
