@@ -16,8 +16,14 @@ Where possible, equivalent VHDL and Verilog versions are included for direct com
 
 ## 🧩 Modules Overview
 
-### ▸ [Problem PWM_With_PLL: PWM Generator with PLL and Debouncer](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/PWM_With_PLL)
+### ▸ [Problem ADC_PWM_System: Analog Signal Sampling with MAX10 ADC + PWM](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/ADC_PWM_System)
+* **Mixed HDL**: `ADC.v`, `ADC_connect.vhd`, `SEG7_LUT.v`, `SEG7_LUT_6.v`, `adc_led7.vhd`, `adc_sequencer.vhd` (contains both Verilog and VHDL files)
+* **Qsys System**: `ADC_PWM_System/ADC.qsys`, `ADC.qip`, `ADC_connect.vhd`, `adc_sequencer.vhd`
+* 💡 Implements a modular FPGA system using the MAX10 ADC to sample analog input signals. The digitized result is displayed using 7-segment displays. The design uses Qsys IP blocks including ALTPLL (10 MHz clock), a JTAG-to-Avalon master bridge, and the MAX10 ADC subsystem for real-time signal capture and control.
+* ✅ System successfully tested on Quartus Prime 16.1 with full compilation, placement, and routing. The design mixes VHDL and Verilog modules and includes a PWM generator, debouncer, and SEG7 display logic. Although not deployed on hardware, the system was validated using RTL Viewer, FMAX analysis, and Qsys configuration. ADC Toolkit and System Console support live waveform monitoring if connected to a DE10-Lite board.
 
+---
+### ▸ [Problem PWM_With_PLL: PWM Generator with PLL and Debouncer](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/PWM_With_PLL)
 * **Verilog**: `PWM_With_PLL/pwm_gen.v`, `PWM_With_PLL/debouncer.v`, `PWM_With_PLL/pwm_led_top.v`, `PWM_With_PLL/pwm_pll.v`  
 * **Schematic**: `PWM_With_PLL/pwm_led_top.bdf`  
 * 💡 Implements a PWM signal generator with duty cycle control using switches, a debouncer for input stability, and a PLL-generated clock for precise timing. Uses a schematic-based top-level design connected to Verilog modules and IP blocks.  
@@ -112,5 +118,6 @@ FPGA-Portfolio/
 ├──C4M1P4_BCD_Adder/                   # VHDL: BCD adder with Testbench
 ├──C4M1P5_BCD_Adder2/                  # VHDL: BCD adder using if-else with Testbench
 ├──PWM_With_PLL/                       # Verilog: PWM Generator with PLL and Debouncer
+├──ADC_PWM_System/                     # Verilog and VHDL: Analog Signal Sampling with MAX10 ADC + PWM
 └── README.md
 ```
