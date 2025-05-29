@@ -1,8 +1,5 @@
 module FIFO8x9( 
 input clk, rst, 
-
- 
-
 input RdPtrClr, WrPtrClr, 
 input RdInc, WrInc,
 input [8:0] DataIn, 
