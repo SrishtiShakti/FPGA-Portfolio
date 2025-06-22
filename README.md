@@ -16,6 +16,38 @@ Where possible, equivalent VHDL and Verilog versions are included for direct com
 
 ## 🧩 Modules Overview
 
+### [Problem: NiosII_SoftProcessor_Qsys — Soft Processor SoC with ADC, SPI, SDRAM](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/NiosII_SoftProcessor_Qsys)
+
+* **Qsys System Files:** `Embed.qsys`, `Embed.qip`, `Embed_inst.v`, `DE10_LITE_Default.v`
+* **Components Used:**
+- `Nios II/f CPU`: Configured with hardware breakpoints, reduced cache, debug support
+- `ALTPLL (2 PLLs)`: Generates 80 MHz, 40 MHz, and 10 MHz clocks for processor, peripherals, and ADC
+- `Avalon-MM Clock Crossing Bridge`: Manages multi-clock domain communication
+- `Modular ADC`: Samples CH1 via sequencer, integrates with 10 MHz ADC clock
+- `On-Chip RAM / Flash`: 16 KB RAM and reconfigurable Flash for program/data
+- `SDRAM Controller`: External memory with phase-shifted clock (80 MHz -90°)
+- `Interval Timer`: Generates periodic interrupts every 1 ms
+- `PIO (LEDs, Slide Switches)`: User interface GPIO with IRQs
+- `SPI Controller`: Interfaces with ADXL345 accelerometer
+- `JTAG UART`: Debug console support via USB Blaster
+- `System ID`: Hardware/software compatibility verification
+* 💡 **Implements** a complete soft-core processor system capable of running real-time control logic. Qsys auto-generates the system interconnect and address map. IRQ priorities and reset vectors are manually set and verified.
+* ✅ **Compiled successfully** in Quartus Prime 16.1. All base addresses and IRQs configured. Includes top-level instantiation and system integration. **No hardware testing performed** due to absence of DE10-Lite board, but RTL and Qsys design are complete and correct.
+
+---
+
+### [Problem: UART_Packetizer_FSM_FIFO — Serial Transmission using FSM and FIFO](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/UART_Packetizer_FSM_FIFO)
+
+* **Verilog:** `FIFO8x8.v`, `FSM_Packetizer.v`, `UART_Transmitter.v`, `Top_Module.v`  
+* **Testbenches:** `tb/FIFO_tb.v`, `tb/FSM_tb.v`, `tb/UART_tb.v`, `tb/Top_Module_tb.v`  
+* **Simulation Artifacts:**  
+ModelSim project `.mpf`, waveform configuration `.do` file, screenshots in `/sim/waveform_screenshots/`
+
+* 💡 **Implements** a UART packetizer system with FIFO buffering and a Mealy-style FSM. 8-bit data is framed with a start and stop bit, forming a 10-bit UART packet, and transmitted serially when `tx_ready` is high. FSM coordinates data flow and UART control, ensuring no loss or conflict.
+* ✅ **Validated** with simulation waveforms for FIFO read/write, FSM state transitions, and UART serial output. Successfully compiled in **Quartus Prime 16.1** with clear module hierarchy and modular integration. No physical board testing performed.
+
+---
+
 ### ▸ [Problem ADC_PWM_System: Analog Signal Sampling with MAX10 ADC + PWM](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/ADC_PWM_System)
 * **Mixed HDL**: `ADC.v`, `ADC_connect.vhd`, `SEG7_LUT.v`, `SEG7_LUT_6.v`, `adc_led7.vhd`, `adc_sequencer.vhd` (contains both Verilog and VHDL files)
 * **Qsys System**: `ADC_PWM_System/ADC.qsys`, `ADC.qip`, `ADC_connect.vhd`, `adc_sequencer.vhd`
@@ -119,5 +151,7 @@ FPGA-Portfolio/
 ├──C4M1P5_BCD_Adder2/                  # VHDL: BCD adder using if-else with Testbench
 ├──PWM_With_PLL/                       # Verilog: PWM Generator with PLL and Debouncer
 ├──ADC_PWM_System/                     # Verilog and VHDL: Analog Signal Sampling with MAX10 ADC + PWM
+├─UART_Packetizer_FSM_FIFO/            # Serial Transmission using FSM and FIFO
+├─NiosII_SoftProcessor_Qsys/              # Soft Processor SoC with ADC, SPI, SDRAM
 └── README.md
 ```
