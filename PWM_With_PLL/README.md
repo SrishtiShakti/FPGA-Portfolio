@@ -1,4 +1,4 @@
-# 💡 DE10-Lite PWM – Pulse Width Modulation Hardware Design
+# 💡PWM – Pulse Width Modulation Hardware Design
 
 ## 📌 Overview
 
@@ -7,7 +7,6 @@ This project implements a pulse width modulation (PWM) LED controller on the DE1
 ✅ Built using Verilog + Schematic (`.bdf`)  
 ✅ Simulated using ModelSim-Altera  
 ✅ Synthesized and implemented with Quartus Prime 16.1  
-✅ Target Device: MAX10 FPGA (10M50DAF484C6GES)
 
 ---
 
