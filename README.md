@@ -21,12 +21,8 @@ Where possible, equivalent VHDL and Verilog versions are included for direct com
 * 💡 This design refactors the classic UART transmitter by **splitting the FSM and the baud counter into separate case-based modules**, cutting logic depth and making timing cleaner.  
 The FSM handles state transitions (Idle → D → Start → D → Data → D → Stop → D → Cleanup), counter independently generates the baud ticks using a compact case structure. This reduces LUT usage and improves maintainability.
 * The UART sends 1 start bit, 8 data bits, and 1 stop bit (10-bit frame). Transmission begins on `i_TX_DV = '1'`, and `o_TX_Done` asserts for one clock when the frame completes.
-* **What This Repo Demonstrates:**
-- A **leaner FSM** with no nested counters  
-- A **case-driven tick counter** to reduce combinational levels  
-* **Verification:**
-✔ Verified thoroughly with ModelSim  
-✔ FSM transitions validated for all states  
+* **What This Repo Demonstrates:** A **leaner FSM** with no nested counters and a **case-driven tick counter** to reduce combinational levels  
+* **Verification:** Verified thoroughly with ModelSim and FSM transitions validated for all states  
 No physical board testing performed.
 
 ---
