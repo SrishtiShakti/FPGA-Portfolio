@@ -34,9 +34,10 @@ stateDiagram-v2
 
     s_Cleanup --> s_Idle
 ```
+
 This approach works, but it mixes functional logic and timing logic inside the same state, increasing the combinational depth and complexity.
 ---
-## 🔧 Refactored FSM (This Repo)
+## 🔧 Refactored and Redesigned FSM (This Repo)
 
 The design introduces a dedicated timing state **D**, which is responsible for waiting the required baud-cycle duration.  
 Each functional state now performs **one operation only**, and then hands control to **D** to enforce timing.
