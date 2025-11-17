@@ -1,7 +1,9 @@
-Refactoring Nandland UART Transmitter — FSM Architecture Improvement (VHDL)
-
+#Refactoring Nandland UART Transmitter — FSM Architecture Improvement (VHDL)
+---
 This project is a rewritten and optimized version of the classic Nandland UART TX VHDL implementation.
+---
 The original design used a five-state FSM, where each state performed both the operation and the internal timing delay:
+---
 ```mermaid
 stateDiagram-v2
     direction LR
@@ -18,8 +20,9 @@ stateDiagram-v2
     s_Cleanup --> s_Idle
 ```
 This approach works, but it mixes functional logic and timing logic inside the same state, increasing the combinational depth and complexity.
-🔧 What I Changed
-
+---
+##🔧 What I Changed
+---
 I refactored the UART TX FSM into a cleaner, more modular, and more timing-friendly 6-state architecture:
 ```mermaid
 stateDiagram-v2
