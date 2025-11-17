@@ -16,7 +16,22 @@ Where possible, equivalent VHDL and Verilog versions are included for direct com
 
 ## 🧩 Modules Overview
 
-### [Problem: NiosII_SoftProcessor_Qsys — Soft Processor SoC with ADC, SPI, SDRAM](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/NiosII_SoftProcessor_Qsys)
+### ▸ [Refactored UART FSM — Clean, Modular UART Transmitter (Case-Based Counter)](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/UART_Tx)
+* Files: `UART_Tx.vhd` (refactored), `wave.do`
+* 💡 This design refactors the classic UART transmitter by **splitting the FSM and the baud counter into separate case-based modules**, cutting logic depth and making timing cleaner.  
+The FSM handles state transitions (Idle → D → Start → D → Data → D → Stop → D → Cleanup), counter independently generates the baud ticks using a compact case structure. This reduces LUT usage and improves maintainability.
+* The UART sends 1 start bit, 8 data bits, and 1 stop bit (10-bit frame). Transmission begins on `i_TX_DV = '1'`, and `o_TX_Done` asserts for one clock when the frame completes.
+* **What This Repo Demonstrates:**
+- A **leaner FSM** with no nested counters  
+- A **case-driven tick counter** to reduce combinational levels  
+* **Verification:**
+✔ Verified thoroughly with ModelSim  
+✔ FSM transitions validated for all states  
+No physical board testing performed.
+
+---
+
+### ▸ [Problem: NiosII_SoftProcessor_Qsys — Soft Processor SoC with ADC, SPI, SDRAM](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/NiosII_SoftProcessor_Qsys)
 
 * **Qsys System Files:** `Embed.qsys`, `Embed.qip`, `Embed_inst.v`, `DE10_LITE_Default.v`
 * **Components Used:**
@@ -36,7 +51,7 @@ Where possible, equivalent VHDL and Verilog versions are included for direct com
 
 ---
 
-### [Problem: UART_Packetizer_FSM_FIFO — Serial Transmission using FSM and FIFO](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/UART_Packetizer_FSM_FIFO)
+### ▸ [Problem: UART_Packetizer_FSM_FIFO — Serial Transmission using FSM and FIFO](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/UART_Packetizer_FSM_FIFO)
 
 * **Verilog:** `FIFO8x8.v`, `FSM_Packetizer.v`, `UART_Transmitter.v`, `Top_Module.v`  
 * **Testbenches:** `tb/FIFO_tb.v`, `tb/FSM_tb.v`, `tb/UART_tb.v`, `tb/Top_Module_tb.v`  
