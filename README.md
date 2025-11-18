@@ -16,7 +16,7 @@ Where possible, equivalent VHDL and Verilog versions are included for direct com
 
 ## 🧩 Modules Overview
 
-### ▸ [Refactored UART FSM — Clean, Modular UART Transmitter (Case-Based Counter)](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/UART_Tx)
+### ▸ [Refactored and Redesigned UART FSM — Clean, Modular UART Transmitter (Case-Based Counter)](https://github.com/SrishtiShakti/FPGA-Portfolio/tree/main/UART_Tx)
 * Files: `UART_Tx.vhd` (refactored), `wave.do`
 * 💡 This design refactors the classic UART transmitter by **splitting the FSM and the baud counter into separate case-based modules**, cutting logic depth and making timing cleaner.  
 The FSM handles state transitions (Idle → D → Start → D → Data → D → Stop → D → Cleanup), counter independently generates the baud ticks using a compact case structure. This reduces LUT usage and improves maintainability.
