@@ -19,6 +19,8 @@ The original FSM mixed timing delays and functional logic inside the same states
 ---
 ## Original FSM (Nandland Style)
 
+This approach works, but it mixes functional logic and timing logic inside the same state, increasing the combinational depth and complexity.
+
 ```mermaid
 stateDiagram-v2
     direction LR
@@ -35,7 +37,7 @@ stateDiagram-v2
     s_Cleanup --> s_Idle
 ```
 
-This approach works, but it mixes functional logic and timing logic inside the same state, increasing the combinational depth and complexity.
+
 ---
 ## 🔧 Refactored and Redesigned FSM (This Repo)
 
