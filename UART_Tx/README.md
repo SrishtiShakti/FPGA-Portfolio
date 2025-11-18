@@ -1,4 +1,4 @@
-# Refactoring Nandland UART Transmitter - FSM Architecture Improvement (VHDL)
+# Refactoring and Redesigning Nandland UART Transmitter - FSM Architecture Improvement (VHDL)
 ---
 🧠 Overview
 
