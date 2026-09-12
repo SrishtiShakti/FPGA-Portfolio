@@ -1,6 +1,6 @@
 # FPGA Portfolio
 
-This repository showcases a curated collection of FPGA design modules implemented in both **Verilog** and **VHDL**. Each module illustrates fundamental digital design concepts such as memory structures (RAM, FIFO), finite state machines (FSMs), arithmetic logic units (ALUs),PPWM with PLL aand debouncer, and 7-segment display control.
+This repository showcases a curated collection of FPGA design modules implemented in both **Verilog** and **VHDL**. Each module illustrates fundamental digital design concepts such as memory structures (RAM, FIFO), finite state machines (FSMs), arithmetic logic units (ALUs), PWM with PLL aand debouncer, and 7-segment display control.
 
 Projects are developed as part of the *FPGA Design for Embedded Systems* specialization and are intended for both learning and demonstration. Each design includes:
 
